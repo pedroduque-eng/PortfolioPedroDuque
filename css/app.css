@@ -112,3 +112,107 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+.custom-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f0f0f0, #cfcfcf);
+    font-family: Arial, sans-serif;
+    color: #555;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #888;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #444, #666, #888); /* degrade cinza elegante */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-row img {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.top-row img:hover {
+    transform: scale(1.1); /* efeito ao passar o mouse */
+}
+
+/* Sidebar vertical como o nav flex-column */
+.custom-nav {
+    display: flex;
+    flex-direction: column; /* organiza os itens em coluna */
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+/* Itens da lista */
+.custom-item {
+    margin-bottom: 0.5rem;
+}
+
+/* Links padrão como nav-link */
+.custom-link {
+    display: block;
+    width: 100%;
+    padding: 5.5rem 1.5rem;
+    text-align: center;
+    color: #eaeaea;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Hover e active iguais ao Bootstrap */
+.custom-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.custom-link.active {
+    color: #fff;
+    background-color: #666;
+}
+
+/* Foto de perfil no final do menu */
+.custom-profile {
+    margin-top: auto; /* empurra para o fim da sidebar */
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.custom-profile img {
+    width: 80%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%; /* redondo igual avatar */
+    object-fit: cover;
+}
