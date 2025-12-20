@@ -113,6 +113,13 @@ code {
     text-align: start;
 }
 
+.home-link img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
 .custom-loader {
     display: flex;
     justify-content: center;
